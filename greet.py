@@ -9,7 +9,7 @@ import logging
 import aiohttp
 import random
 
-TOKEN = "8081499861:AAEXa3gv8-1ReqmavC-UD-XMSFpLwo1W25Y"
+TOKEN = "YOUR_TOKEN"
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -789,7 +789,7 @@ async def search_idiom(update: Update, context: CallbackContext) -> None:
 
 def main() -> None:
     # токен API
-    application = Application.builder().token("8081499861:AAEXa3gv8-1ReqmavC-UD-XMSFpLwo1W25Y").build()
+    application = Application.builder().token("YOUR_TOKEN").build()
     application.add_handler(MessageHandler(filters.ANIMATION, get_file_id))  # <- Добавьте эту строку
 
     # Создание ConversationHandler для викторины
